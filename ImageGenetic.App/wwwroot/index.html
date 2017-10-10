@@ -1,12 +1,337 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+    crossorigin="anonymous">
 </head>
+
 <body>
-    <h1>
-        Header
-    </h1>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="display-4">Golden hue</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header">Information</div>
+                <div class="card-body">
+                  <div class="form-group">
+                    <label>Current generation ID</label>
+                    <input type="text" id="current-generation-id" class="form-control" readonly>
+                    <small class="form-text text-muted">
+                    (Valid for 15 minutes)
+                    </small>
+                    <hr>
+                    <dl class="row">
+                      <dt class="col-md-3">Generations</dt>
+                      <dd class="col-md-9" id="generation-number">(not started yet)</dd>
+                      <dt class="col-md-3">Time elapsed</dt>
+                      <dd class="col-md-9">
+                        <p><span id="elapsed">0</span> seconds</p>
+                      </dd>
+                      <dt class="col-md-3">Status</dt>
+                      <dd class="col-md-9">
+                        <p id="status">Not started</p>
+                      </dd>
+                    </dl>
+                    <div id="general-information">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header">Individuals</div>
+                <div class="card-body">
+                  <div id="images-container">
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <div class="card bg-dark text-white">
+                          <img id="image-1" class="card-img" src="http://via.placeholder.com/1024/f8f9fa/868e96/?text=no%20image" alt="Card image">
+                          <div class="card-img-overlay">
+                            <p id="aptitude-1" class="card-text small d-inline-block bg-dark"></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="card bg-dark text-white">
+                          <img id="image-2" class="card-img" src="http://via.placeholder.com/1024/f8f9fa/868e96/?text=no%20image" alt="Card image">
+                          <div class="card-img-overlay">
+                            <p id="aptitude-2" class="card-text small d-inline-block bg-dark"></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="card bg-dark text-white">
+                          <img id="image-3" class="card-img" src="http://via.placeholder.com/1024/f8f9fa/868e96/?text=no%20image" alt="Card image">
+                          <div class="card-img-overlay">
+                            <p id="aptitude-3" class="card-text small d-inline-block bg-dark"></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="card bg-dark text-white">
+                          <img id="image-4" class="card-img" src="http://via.placeholder.com/1024/f8f9fa/868e96/?text=no%20image" alt="Card image">
+                          <div class="card-img-overlay">
+                            <p id="aptitude-4" class="card-text small d-inline-block bg-dark"></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <div class="card bg-dark text-white">
+                          <img id="image-5" class="card-img" src="http://via.placeholder.com/1024/f8f9fa/868e96/?text=no%20image" alt="Card image">
+                          <div class="card-img-overlay">
+                            <p id="aptitude-5" class="card-text small d-inline-block bg-dark"></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="card bg-dark text-white">
+                          <img id="image-6" class="card-img" src="http://via.placeholder.com/1024/f8f9fa/868e96/?text=no%20image" alt="Card image">
+                          <div class="card-img-overlay">
+                            <p id="aptitude-6" class="card-text small d-inline-block bg-dark"></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="card bg-dark text-white">
+                          <img id="image-7" class="card-img" src="http://via.placeholder.com/1024/f8f9fa/868e96/?text=no%20image" alt="Card image">
+                          <div class="card-img-overlay">
+                            <p id="aptitude-7" class="card-text small d-inline-block bg-dark"></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="card bg-dark text-white">
+                          <img id="image-8" class="card-img" src="http://via.placeholder.com/1024/f8f9fa/868e96/?text=no%20image" alt="Card image">
+                          <div class="card-img-overlay">
+                            <p id="aptitude-8" class="card-text small d-inline-block bg-dark"></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <div class="card bg-dark text-white">
+                          <img id="image-9" class="card-img" src="http://via.placeholder.com/1024/f8f9fa/868e96/?text=no%20image" alt="Card image">
+                          <div class="card-img-overlay">
+                            <p id="aptitude-9" class="card-text small d-inline-block bg-dark"></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="card bg-dark text-white">
+                          <img id="image-10" class="card-img" src="http://via.placeholder.com/1024/f8f9fa/868e96/?text=no%20image" alt="Card image">
+                          <div class="card-img-overlay">
+                            <p id="aptitude-10" class="card-text small d-inline-block bg-dark"></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="card bg-dark text-white">
+                          <img id="image-11" class="card-img" src="http://via.placeholder.com/1024/f8f9fa/868e96/?text=no%20image" alt="Card image">
+                          <div class="card-img-overlay">
+                            <p id="aptitude-11" class="card-text small d-inline-block bg-dark"></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="card bg-dark text-white">
+                          <img id="image-12" class="card-img" src="http://via.placeholder.com/1024/f8f9fa/868e96/?text=no%20image" alt="Card image">
+                          <div class="card-img-overlay">
+                            <p id="aptitude-12" class="card-text small d-inline-block bg-dark"></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <div class="card bg-dark text-white">
+                          <img id="image-13" class="card-img" src="http://via.placeholder.com/1024/f8f9fa/868e96/?text=no%20image" alt="Card image">
+                          <div class="card-img-overlay">
+                            <p id="aptitude-13" class="card-text small d-inline-block bg-dark"></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="card bg-dark text-white">
+                          <img id="image-14" class="card-img" src="http://via.placeholder.com/1024/f8f9fa/868e96/?text=no%20image" alt="Card image">
+                          <div class="card-img-overlay">
+                            <p id="aptitude-14" class="card-text small d-inline-block bg-dark"></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="card bg-dark text-white">
+                          <img id="image-15" class="card-img" src="http://via.placeholder.com/1024/f8f9fa/868e96/?text=no%20image" alt="Card image">
+                          <div class="card-img-overlay">
+                            <p id="aptitude-15" class="card-text small d-inline-block bg-dark"></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="card bg-dark text-white">
+                          <img id="image-16" class="card-img" src="http://via.placeholder.com/1024/f8f9fa/868e96/?text=no%20image" alt="Card image">
+                          <div class="card-img-overlay">
+                            <p id="aptitude-16" class="card-text small d-inline-block bg-dark"></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <div class="card bg-dark text-white">
+                          <img id="image-17" class="card-img" src="http://via.placeholder.com/1024/f8f9fa/868e96/?text=no%20image" alt="Card image">
+                          <div class="card-img-overlay">
+                            <p id="aptitude-17" class="card-text small d-inline-block bg-dark"></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="card bg-dark text-white">
+                          <img id="image-18" class="card-img" src="http://via.placeholder.com/1024/f8f9fa/868e96/?text=no%20image" alt="Card image">
+                          <div class="card-img-overlay">
+                            <p id="aptitude-18" class="card-text small d-inline-block bg-dark"></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="card bg-dark text-white">
+                          <img id="image-19" class="card-img" src="http://via.placeholder.com/1024/f8f9fa/868e96/?text=no%20image" alt="Card image">
+                          <div class="card-img-overlay">
+                            <p id="aptitude-19" class="card-text small d-inline-block bg-dark"></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="card bg-dark text-white">
+                          <img id="image-20" class="card-img" src="http://via.placeholder.com/1024/f8f9fa/868e96/?text=no%20image" alt="Card image">
+                          <div class="card-img-overlay">
+                            <p id="aptitude-20" class="card-text small d-inline-block bg-dark"></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header">Generation settings</div>
+            <div class="card-body">
+              <p class="card-text p-y-1">Create a new generation or enter a previous generation.</p>
+              <form method="POST" action="/api/generate/" id="settings-form">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Resolution</label>
+                      <div class="input-group">
+                        <input class="form-control  form-control-sm" name="resolutionSquare" id="resolutionSquare" type="number" max=256 min=50 value=50
+                          placeholder="50" required>
+                        <span class=" form-control-sm input-group-addon">px</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Minimum aptitude</label>
+                      <div class="input-group">
+                        <input class="form-control  form-control-sm" type="number" max=99 min=10 value=99 placeholder="50" name="minimalAptitude"
+                          id="minimalAptitude" required>
+                        <span class=" form-control-sm input-group-addon">%</span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Stop after</label>
+                      <div class="input-group">
+                        <input class="form-control form-control-sm" type="number" max=5 min=1 value=1 name="timeoutMinutes" id="timeoutMinutes" required>
+                        <span class=" form-control-sm input-group-addon">minute(s)</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Population size</label>
+                      <input class="form-control form-control-sm" type="number" name="populationSize" id="populationSize" max=20 min=2 value=10
+                        required>
+                    </div>
+                  </div>
+                </div>
+                <button id="start-button" disabled type="submit" class="btn btn-primary">Start</button>
+              </form>
+              <hr>
+              <form method="GET" action="/api/generate/encoded/" id="load-previous">
+                <div class="form-group">
+                  <label>Previous generation ID</label>
+                  <input type="text" name="id" id="generation-id" class="form-control" placeholder="Enter ID">
+                </div>
+                <button type="submit" class="btn btn-primary">Load this ID</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-error" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Error</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+          </div>
+          <div id="modal-error-body" class="modal-body">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+      crossorigin="anonymous"></script>
+    <script src="main-script.js"></script>
 </body>
+
 </html>
